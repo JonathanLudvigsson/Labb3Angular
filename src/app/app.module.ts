@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BookindexComponent } from './components/bookindex/bookindex.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    BookindexComponent,
   ],
   imports: [
     BrowserModule,
