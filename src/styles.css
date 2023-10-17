@@ -19,7 +19,7 @@ nav{
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1.8fr 1fr;
     grid-template-rows: 0;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -28,7 +28,7 @@ nav{
     margin: auto;
     width:100%;
     min-width:660px;
-    height:970px;
+    height:1200px;
     background-color:rgb(185, 143, 143);
 }
 .tablecontainer{
@@ -67,6 +67,28 @@ button{
 }
 .deletebutton:hover{
     background-color:rgb(255, 75, 75);
+}
+.updateform input, .updateform p{
+    margin-left: 20px;
+}
+.textinput{
+    width: 80%;
+    height:25px;
+}
+.updateform button{
+    margin-top:15px;
+    margin-left:20px;
+    height:30px;
+    width:50px;
+}
+.updatecheck{
+    height:20px;
+    width:20px;
+}
+.updatedate{
+    font-size: 15px;
+    width: 150px;
+    height:20px;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -14,7 +14,7 @@ export class BookindexComponent {
   bookList:Book[] = []
 
   authorN:string = ''
-
+  
   bookObject:Book = {
     id:'',
     name:'',
@@ -36,6 +36,7 @@ export class BookindexComponent {
     this.bookService.getAllBooks().subscribe(response => {
       this.bookList = response.result
       this.errorList = response.errorMessages
+      console.log(response.errorMessages)
       this.authorN = ''
     })
   }
@@ -44,6 +45,7 @@ export class BookindexComponent {
     this.bookService.getBook(id).subscribe(response => {
       this.bookObject = response.result[0]
       this.errorList = response.errorMessages
+      console.log(response.errorMessages)
     })
   }
   
@@ -51,6 +53,7 @@ export class BookindexComponent {
     this.bookService.getBook(id).subscribe(response => {
       this.bookList = response.result
       this.errorList = response.errorMessages
+      console.log(response.errorMessages)
     })
   }
 
@@ -58,6 +61,7 @@ export class BookindexComponent {
     this.bookService.getFromAuthor(authorName).subscribe(response => {
       this.bookList = response.result
       this.errorList = response.errorMessages
+      console.log(response.errorMessages)
       this.authorN = authorName
     })
   }
@@ -65,6 +69,7 @@ export class BookindexComponent {
   createBook(newBook:Book):void{
     this.bookService.createBook(newBook).subscribe(response => {
       this.errorList = response.errorMessages
+      console.log(response.errorMessages)
       if (this.authorN == ''){
         this.getAllBooks()
       }
@@ -78,6 +83,7 @@ export class BookindexComponent {
   updateBook(id:string, updatedBook:Book):void{
     this.bookService.updateBook(id, updatedBook).subscribe(response => {
       this.errorList = response.errorMessages
+      console.log(response.errorMessages)
       if (this.authorN == ''){
         this.getAllBooks()
       }
@@ -90,6 +96,7 @@ export class BookindexComponent {
   deleteBook(id:string):void{
     this.bookService.deleteBook(id).subscribe(response => {
       this.errorList = response.errorMessages
+      console.log(response.errorMessages)
       if (this.authorN == ''){
         this.getAllBooks()
       }

@@ -36,22 +36,22 @@
       <br>
   
       <div class="errorMessages" *ngFor="let error of errorList">
-        <p>{{error}}</p>
+        {{error}}
       </div>
   
       <div class="updatecontainer">
         <div class="updateform">
-          <form #form="ngForm" (ngSubmit)="updateBook(bookObject.id, bookObject)">
+          <form #form="ngForm" class="updateform" (ngSubmit)="updateBook(bookObject.id, bookObject)">
             <p>id</p>
-            <input [(ngModel)]="bookObject.id" name="bookUpdateId">
+            <input [(ngModel)]="bookObject.id" name="bookUpdateId" type="number" style="width:80px;">
             <p>Name</p>
-            <input [(ngModel)]="bookObject.name" name="name">
+            <input [(ngModel)]="bookObject.name" name="name" class="textinput">
             <p>Author</p>
-            <input [(ngModel)]="bookObject.author" name="author">
+            <input [(ngModel)]="bookObject.author" name="author" class="textinput">
             <p>Available</p>
-            <input [(ngModel)]="bookObject.available" name="available" type="checkbox">
+            <input [(ngModel)]="bookObject.available" name="available" type="checkbox" class="updatecheck">
             <p>ReleaseDate</p>
-            <input [(ngModel)]="bookObject.releaseDate" type="date" name="releaseDate">
+            <input [(ngModel)]="bookObject.releaseDate" type="date" name="releaseDate" class="updatedate">
             <br>
             <button type="button" (click)="createBook(bookObject)">Create</button>
             <button type="submit">Edit</button>
